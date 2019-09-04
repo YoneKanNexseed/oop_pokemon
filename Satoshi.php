@@ -17,4 +17,29 @@ class Satoshi
     // サトシが持つboxに新しくポケモンを追加する
     $this->box[] = $newPokemon;
   }
+
+  public function showPokemons()
+  {
+    echo '--ポケモン一覧--<br>';
+
+    foreach ($this->box as $pokemon) {
+      echo $pokemon->name;
+      echo '：';
+      $pokemon->cry();
+      echo '<br>';
+    }
+
+    echo '--------------------<br>';
+  }
+
+  // 箱に入っているポケモンの番号をもらって、攻撃を実行
+  public function orderAttack($num)
+  {
+    $pokemon = $this->box[$num];
+
+    // var_dump($pokemon);
+
+    $pokemon->attack();
+  }
+
 }
