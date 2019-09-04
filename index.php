@@ -54,13 +54,11 @@ echo '<br><br><br>';
 // 持っているポケモンの確認
 $satoshi->showPokemons();
 
-
 // ポケモンに攻撃を指示
 $satoshi->orderAttack(0);
 
-
-
-
+// 全員で攻撃
+$satoshi->superAttack();
 
 
 

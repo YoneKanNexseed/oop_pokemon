@@ -42,4 +42,17 @@ class Satoshi
     $pokemon->attack();
   }
 
+  // メソッド名：superAttack
+  // 処理：持っているポケモン全部に攻撃を命令
+
+  public function superAttack()
+  {
+    echo '------全体攻撃-----<br>';
+
+    foreach ($this->box as $pokemon) {
+      $pokemon->attack();
+    }
+
+    echo '--------------------<br>';
+  }
 }
